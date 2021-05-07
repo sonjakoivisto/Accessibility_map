@@ -60,11 +60,8 @@ def FileFinder(YKR_ids):
     #loop over the inputs and keep track of loops
     for num, i in enumerate(YKR_ids):
         
-        #access the first 4 numbers of the input which indicate the folder name (xxx added in the string)
-        folder = str(i)[0:4]
-        
         #put together the filepath according to the filepaths when you unzip Travel Time Matrix
-        fp = r"data/HelsinkiTravelTimeMatrix2018/" + folder + "xxx/travel_times_to_ " + str(i) + ".txt"
+        fp = r"data/HelsinkiTravelTimeMatrix2018/travel_times_to_ " + str(i) + ".txt"
         #Print which file is under process and how many in total
         print("Processing file " + fp + ". Progress: " + str(num+1) + "/" + str(len(YKR_ids)))
         
